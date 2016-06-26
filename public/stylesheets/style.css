@@ -1,0 +1,74 @@
+/* FONTS */
+
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+
+ /* DEFAULTS */
+
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font: 14px Helvetica, Arial, sans-serif;
+	font-family: 'Karla', Helvetica, sans-serif;
+	font-size: 1.5em;
+}
+
+
+a {
+	font-family: 'Inconsolata', courier, monospace;
+	color: #00B7FF;
+}
+
+
+/* Main Interface Layout */
+
+.interface-dscrpt {
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.music-pad-container {
+	padding: 5%;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.music-pad-row {
+	text-align: center;
+}
+
+.music-pad-key {
+	display: inline-block;
+	margin: 20px 3%;
+}
+
+.tone-pad-container {
+	padding-top: 10%;
+}
+
+
+/*  Main Interface Design (Type, Buttons)  */
+
+.title-interface {
+	color: #ef005b;
+}
+
+.description {
+	font-family: 'Inconsolata', monospace;
+}
+
+.tone-pad-btn {
+	display: inline-block;
+	margin: 20px 3%;
+	border: #ef005b solid 1px;
+	border-radius: 3px;
+	padding: 9px 20px;
+}
+
+.tone-pad-btn:hover {
+	color: #580022;
+	border-radius: 3px;
+	background-color: #ef005b;
+}
