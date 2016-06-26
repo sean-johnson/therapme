@@ -17,8 +17,8 @@ body {
 
 
 a {
-	font-family: 'Inconsolata', courier, monospace;
-	color: #00B7FF;
+	text-decoration: none;
+	color: black;
 }
 
 
@@ -37,6 +37,11 @@ a {
 
 .music-pad-row {
 	text-align: center;
+}
+
+.keySound {
+	height: 0;
+	visibility: hidden;
 }
 
 .music-pad-key {
@@ -60,6 +65,7 @@ a {
 }
 
 .tone-pad-btn {
+	color: black;
 	display: inline-block;
 	margin: 20px 3%;
 	border: #ef005b solid 1px;
@@ -69,6 +75,13 @@ a {
 
 .tone-pad-btn:hover {
 	color: #580022;
+	border-radius: 3px;
+	background-color: #FF495C;
+}
+
+.tone-pad-btn:target {
+	outline: none;
+    color: #580022;
 	border-radius: 3px;
 	background-color: #ef005b;
 }

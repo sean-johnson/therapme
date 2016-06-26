@@ -1,66 +1,61 @@
 
     <div class="music-pad-container">
 
-	<form action="" method="post">
-        <button type="button" onclick="playIt()">play</button>
-        <div id="embed"></div>
-    </form>
-
-	<div class="interface-dscrpt">
-		<h1 class="title-interface">{{title}}</h1>
-		<p class="description">Play, Create.</p>
-	</div>
-
-	<div class="interface">
-		<div class="row music-pad-row">
-			<div class="twelve columns hi-keys">
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-			</div>
+		<div class="interface-dscrpt">
+			<h1 class="title-interface">{{title}}</h1>
+			<p class="description">Play, Create.</p>
 		</div>
 
-		<div class="row music-pad-row">
-			<div class="twelve columns mid-keys">
-				<div class="music-pad-key"><div id="65"></div>*</div> 
-				<div class="music-pad-key"><div id="66"></div>*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
+		<div class="interface">
+			<div class="row music-pad-row">
+				<div class="twelve columns hi-keys">
+					<div class="music-pad-key" id="Q-key"><div class="keySound" id="81"></div>*</div>
+					<div class="music-pad-key" id="W-key"><div class="keySound" id="87"></div>*</div>
+					<div class="music-pad-key" id="E-key"><div class="keySound" id="69"></div>*</div>
+					<div class="music-pad-key" id="R-key"><div class="keySound" id="82"></div>*</div>
+					<div class="music-pad-key" id="T-key"><div class="keySound" id="84"></div>*</div>
+					<div class="music-pad-key" id="Y-key"><div class="keySound" id="89"></div>*</div>
+					<div class="music-pad-key" id="U-key"><div class="keySound" id="85"></div>*</div>
+					<div class="music-pad-key" id="I-key"><div class="keySound" id="73"></div>*</div>
+					<div class="music-pad-key" id="O-key"><div class="keySound" id="79"></div>*</div>
+					<div class="music-pad-key" id="P-key"><div class="keySound" id="80"></div>*</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="row music-pad-row">
-			<div class="twelve columns low-keys">
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
-				<div class="music-pad-key">*</div>
+			<div class="row music-pad-row">
+				<div class="twelve columns mid-keys">
+					<div class="music-pad-key" id="A-key"><div class="keySound" id="65"></div>*</div> 
+					<div class="music-pad-key" id="S-key"><div class="keySound" id="83"></div>*</div>
+					<div class="music-pad-key" id="D-key"><div class="keySound" id="68"></div>*</div>
+					<div class="music-pad-key" id="F-key"><div class="keySound" id="70"></div>*</div>
+					<div class="music-pad-key" id="G-key"><div class="keySound" id="71"></div>*</div>
+					<div class="music-pad-key" id="H-key"><div class="keySound" id="72"></div>*</div>
+					<div class="music-pad-key" id="J-key"><div class="keySound" id="74"></div>*</div>
+					<div class="music-pad-key" id="K-key"><div class="keySound" id="75"></div>*</div>
+					<div class="music-pad-key" id="L-key"><div class="keySound" id="76"></div>*</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="row music-pad-row">
-			<div class="twelve columns tone-pad-container">
-				<div class="tone-pad-btn">Tone 1</div>
-				<div class="tone-pad-btn">Tone 2</div>
-				<div class="tone-pad-btn">Tone 3</div>
+			<div class="row music-pad-row">
+				<div class="twelve columns low-keys">
+					<div class="music-pad-key" id="Z-key"><div class="keySound" id="90"></div>*</div>
+					<div class="music-pad-key" id="X-key"><div class="keySound" id="88"></div>*</div>
+					<div class="music-pad-key" id="C-key"><div class="keySound" id="67"></div>*</div>
+					<div class="music-pad-key" id="V-key"><div class="keySound" id="86"></div>*</div>
+					<div class="music-pad-key" id="B-key"><div class="keySound" id="66"></div>*</div>
+					<div class="music-pad-key" id="N-key"><div class="keySound" id="78"></div>*</div>
+					<div class="music-pad-key" id="M-key"><div class="keySound" id="77"></div>*</div>
+				</div>
+			</div>
+
+			<div class="row music-pad-row">
+				<div class="twelve columns tone-pad-container">
+					<a id="tone1" href="#tone1" class="tone-pad-btn">Tone 1</a>
+					<a id="tone2" href="#tone2" class="tone-pad-btn">Tone 2</a>
+					<a id="tone3" href="#tone3" class="tone-pad-btn">Tone 3</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
 </div>
 
