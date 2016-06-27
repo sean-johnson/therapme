@@ -28,24 +28,44 @@ var soundBites = {
 }
 
 
+
+
 document.onkeydown = function(e) {
 
 	var soundId = soundBites[e.keyCode]
 
-	function animateSound(key) {
-		console.log("Here is key press: ", key)
-		document.getElementById(soundId)
-	}
+	var soundKey = new Howl({
+	  urls: ["../sounds/main/" + soundId + ".wav"]
+	})
 
 	if (soundId) {
-		animateSound(soundId)
-		document.getElementById(soundId).innerHTML="<embed src='../sounds/main/" + soundId + ".wav' autostart=true loop=false volume=100 hidden=true>"
-    	return true
+		soundKey.play()
     } else {
-    	console.log("HERE is soundId; ", soundId)
-    	console.log("key not mapped : code is", e.keyCode);
+    	console.log("key not mapped : code is", e.keyCode, "Here is soundId; ", soundId);
     }	
 }
+
+
+function StartOrStop(audioFile) {
+    var audie = document.getElementById("toneAudio");
+ 
+   	audie.src = audioFile;
+
+    if (audie.value === true) {
+        console.log('pause');
+        audie.value = false
+        audie.pause();
+    } else {
+    	console.log('play ', audie.src)
+    	audie.value = true
+        audie.play();
+    }
+}
+
+
+
+
+
 
 
 

@@ -49,13 +49,15 @@
 			</div>
 
 			<div class="row music-pad-row">
-				<div class="twelve columns tone-pad-container">
-					<a id="tone1" href="#tone1" class="tone-pad-btn">Tone 1</a>
-					<a id="tone2" href="#tone2" class="tone-pad-btn">Tone 2</a>
-					<a id="tone3" href="#tone3" class="tone-pad-btn">Tone 3</a>
+				<div class="twelve columns tone-pad-container" id="tone-selection">
+					<a id="tone1" href="#tone1" onclick="StartOrStop('../sounds/main/tones/1.wav')" class="tone-pad-btn">Tone 1</a>
+					<a id="tone2" href="#tone2" onclick="StartOrStop('../sounds/main/tones/2.wav')" class="tone-pad-btn">Tone 2</a>
+					<a id="tone3" href="#tone3" onclick="StartOrStop('../sounds/main/tones/3.wav')" class="tone-pad-btn">Tone 3</a>
 				</div>
 			</div>
 		</div>
+		    
+		<audio id="toneAudio"></audio>
 
 </div>
 

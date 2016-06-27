@@ -76,12 +76,13 @@ a {
 .tone-pad-btn:hover {
 	color: #580022;
 	border-radius: 3px;
-	background-color: #FF495C;
+	background-color: #ef005b;
 }
 
-.tone-pad-btn:target {
+.tone-pad-btn:active, .tone-pad-btn:focus {
 	outline: none;
-    color: #580022;
+    color: rgba(0,0,0,0.7);
+    border: #2A7221 solid 1px;
 	border-radius: 3px;
-	background-color: #ef005b;
+	background-color: #9AFD00;
 }
