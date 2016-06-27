@@ -27,9 +27,6 @@ var soundBites = {
 	90 : 90  //Z-key - Low
 }
 
-
-
-
 document.onkeydown = function(e) {
 
 	var soundId = soundBites[e.keyCode]
@@ -44,7 +41,6 @@ document.onkeydown = function(e) {
     	console.log("key not mapped : code is", e.keyCode, "Here is soundId; ", soundId);
     }	
 }
-
 
 function StartOrStop(audioFile) {
     var audie = document.getElementById("toneAudio");
@@ -61,6 +57,8 @@ function StartOrStop(audioFile) {
         audie.play();
     }
 }
+
+
 
 
 
