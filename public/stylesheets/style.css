@@ -86,3 +86,12 @@ a {
 	background-color: #9AFD00;
 }
 
+.animation {
+	display: fixed;
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: blue;
+	z-index: 400;
+}
+

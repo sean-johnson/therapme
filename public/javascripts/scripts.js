@@ -37,6 +37,7 @@ document.onkeydown = function(e) {
 
 	if (soundId) {
 		soundKey.play()
+		showColor(soundId)
     } else {
     	console.log("key not mapped : code is", e.keyCode, "Here is soundId; ", soundId);
     }	
@@ -56,6 +57,18 @@ function StartOrStop(audioFile) {
     	audie.value = true
         audie.play();
     }
+}
+
+var obj = {
+	backgroundColor: "#f00",
+	width: 400,
+	height: 400,
+	borderRadius: 200
+}
+
+function showColor(keyId) {
+    var el = document.getElementById( keyId + "-animation")
+    TweenMax.to(el, 2, obj)
 }
 
 
