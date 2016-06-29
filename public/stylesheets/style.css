@@ -29,9 +29,16 @@ a {
 }
 
 .music-pad-container {
-	padding: 5%;
 	width: 90%;
-	margin: 0 auto;
+	height: 90%;
+	padding: 5%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: auto;
 }
 
 .music-pad-row {
@@ -86,12 +93,19 @@ a {
 	background-color: #9AFD00;
 }
 
+/*  Main Interface Animations  */
+
 .animation {
-	display: fixed;
-	position: absolute;
-	width: 400px;
-	height: 400px;
-	background-color: blue;
-	z-index: 400;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: red;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 

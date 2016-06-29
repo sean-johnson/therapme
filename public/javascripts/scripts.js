@@ -60,11 +60,14 @@ function StartOrStop(audioFile) {
 }
 
 var obj = {
-	backgroundColor: "#f00",
-	width: 400,
-	height: 400,
-	borderRadius: 200
+	backgroundColor: "#FBFF12",
+	width: 600,
+	height: 600,
+	borderRadius: 300,
+	ease:Elastic.easeOut,
 }
+
+
 
 function showColor(keyId) {
     var el = document.getElementById( keyId + "-animation")
