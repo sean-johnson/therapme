@@ -7,7 +7,7 @@ var soundBites = {
 	70 : 70, //F-key - Mid
 	71 : 71, //G-key - Mid
 	72 : 72, //H-key - Mid
-	73 : 73, //I-key 
+	73 : 73, //I-key
 	74 : 74, //J-key - Mid
 	75 : 75, //K-key - Mid
 	76 : 76, //L-key - Mid
@@ -40,12 +40,12 @@ document.onkeydown = function(e) {
 		showColor(soundId)
     } else {
     	console.log("key not mapped : code is", e.keyCode, "Here is soundId; ", soundId);
-    }	
+    }
 }
 
 function StartOrStop(audioFile) {
     var audie = document.getElementById("toneAudio");
- 
+
    	audie.src = audioFile;
 
     if (audie.value === true) {
@@ -59,27 +59,16 @@ function StartOrStop(audioFile) {
     }
 }
 
-var obj = {
-	backgroundColor: "#FBFF12",
-	width: 600,
-	height: 600,
-	borderRadius: 300,
-	ease:Elastic.easeOut,
-}
-
-
 
 function showColor(keyId) {
+	var obj = {
+		backgroundColor: "#EE6055",
+		width: 600,
+		height: 600,
+		borderRadius: 300,
+		ease:Bounce.easeOut,
+	}
+
     var el = document.getElementById( keyId + "-animation")
-    TweenMax.to(el, 2, obj)
+    TweenMax.from(el, 1, obj)
 }
-
-
-
-
-
-
-
-
-
-
