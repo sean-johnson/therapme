@@ -59,16 +59,33 @@ function StartOrStop(audioFile) {
     }
 }
 
-
 function showColor(keyId) {
-	var obj = {
-		backgroundColor: "#EE6055",
-		width: 600,
-		height: 600,
-		borderRadius: 300,
-		ease:Bounce.easeOut,
-	}
 
-    var el = document.getElementById( keyId + "-animation")
-    TweenMax.from(el, 1, obj)
+    var idPressed = document.getElementById( keyId + "-animation")
+		var max = 255
+		var min = 1
+		var x = Math.random() * (max - min) + min
+		var y = Math.random() * (max - min) + min
+		var z = Math.random() * (max - min) + min
+		var colorGenerator = 'rgb(' + x + ',' + y + ',' + z + ')'
+
+		var tl = new TimelineMax({paused:true})
+    tl.to(idPressed, .5, {
+				backgroundColor: colorGenerator,
+				position: "absolute",
+				width: 600,
+				height: 600,
+				borderRadius: "50%",
+				zIndex: -1,
+				ease:Elastic.easeOut,
+			})
+			.to(idPressed, .5, {
+				width:10,
+				height:10,
+				backgroundColor: colorGenerator,
+				zIndex: -1,
+				ease:Strong.easeInOut})
+			.to(idPressed, .5, {
+				position: "relative"})
+			.restart()
 }

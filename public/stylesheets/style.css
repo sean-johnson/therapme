@@ -100,7 +100,7 @@ a {
     height: 10px;
     border-radius: 5px;
     background-color: #59C9A5;
-    position: fixed;
+    position: relative;
     overflow: hidden;
     top:0;
     bottom: 0;
@@ -108,4 +108,3 @@ a {
     right: 0;
     margin: auto;
 }
-
