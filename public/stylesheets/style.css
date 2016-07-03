@@ -15,7 +15,6 @@ body {
 	font-size: 1.5em;
 }
 
-
 a {
 	text-decoration: none;
 	color: black;
@@ -29,6 +28,13 @@ a {
 	top: 10%;
 	z-index: 300;
 	text-align: center;
+}
+
+#logo {
+	margin: 0 auto;
+	padding: 0 0 15px 0;
+	width: 220px;
+	opacity: .8;
 }
 
 .music-pad-container {
