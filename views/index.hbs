@@ -1,62 +1,66 @@
 
-    <div class="music-pad-container">
-
-		<div class="interface-dscrpt">
-			<h1 class="title-interface">{{title}}</h1>
-			<p class="description">Play, Create.</p>
-		</div>
-
-		<div class="interface">
-			<div class="row music-pad-row">
-				<div class="twelve columns hi-keys">
-					<div class="music-pad-key" name="q" id="81-key"><div class="animation" id="81-animation"></div></div>
-					<div class="music-pad-key" name="w" id="87-key"><div class="animation" id="87-animation"></div></div>
-					<div class="music-pad-key" name="e" id="69-key"><div class="animation" id="69-animation"></div></div>
-					<div class="music-pad-key" name="r" id="82-key"><div class="animation" id="82-animation"></div></div>
-					<div class="music-pad-key" name="t" id="84-key"><div class="animation" id="84-animation"></div></div>
-					<div class="music-pad-key" name="y" id="89-key"><div class="animation" id="89-animation"></div></div>
-					<div class="music-pad-key" name="u" id="85-key"><div class="animation" id="85-animation"></div></div>
-					<div class="music-pad-key" name="i" id="73-key"><div class="animation" id="73-animation"></div></div>
-					<div class="music-pad-key" name="o" id="79-key"><div class="animation" id="79-animation"></div></div>
-					<div class="music-pad-key" name="p" id="80-key"><div class="animation" id="80-animation"></div></div>
-				</div>
-			</div>
-
-			<div class="row music-pad-row">
-				<div class="twelve columns mid-keys">
-					<div class="music-pad-key" name="a" id="65-key"><div class="animation" id="65-animation"></div></div>
-					<div class="music-pad-key" name="s" id="83-key"><div class="animation" id="83-animation"></div></div>
-					<div class="music-pad-key" name="d" id="68-key"><div class="animation" id="68-animation"></div></div>
-					<div class="music-pad-key" name="f" id="70-key"><div class="animation" id="70-animation"></div></div>
-					<div class="music-pad-key" name="g" id="71-key"><div class="animation" id="71-animation"></div></div>
-					<div class="music-pad-key" name="h" id="72-key"><div class="animation" id="72-animation"></div></div>
-					<div class="music-pad-key" name="j" id="74-key"><div class="animation" id="74-animation"></div></div>
-					<div class="music-pad-key" name="k" id="75-key"><div class="animation" id="75-animation"></div></div>
-					<div class="music-pad-key" name="l" id="76-key"><div class="animation" id="76-animation"></div></div>
-				</div>
-			</div>
-
-			<div class="row music-pad-row">
-				<div class="twelve columns low-keys">
-					<div class="music-pad-key" name="z" id="90-key"><div class="animation" id="90-animation"></div></div>
-					<div class="music-pad-key" name="x" id="88-key"><div class="animation" id="88-animation"></div></div>
-					<div class="music-pad-key" name="c" id="67-key"><div class="animation" id="67-animation"></div></div>
-					<div class="music-pad-key" name="v" id="86-key"><div class="animation" id="86-animation"></div></div>
-					<div class="music-pad-key" name="b" id="66-key"><div class="animation" id="66-animation"></div></div>
-					<div class="music-pad-key" name="n" id="78-key"><div class="animation" id="78-animation"></div></div>
-					<div class="music-pad-key" name="m" id="77-key"><div class="animation" id="77-animation"></div></div>
-				</div>
-			</div>
-
-			<div class="row music-pad-row">
-				<div class="twelve columns tone-pad-container" id="tone-selection">
-					<a id="tone1" href="#" onclick="StartOrStop('../sounds/main/tones/1.wav')" class="tone-pad-btn">Tone 1</a>
-					<a id="tone2" href="#" onclick="StartOrStop('../sounds/main/tones/2.wav')" class="tone-pad-btn">Tone 2</a>
-					<a id="tone3" href="#" onclick="StartOrStop('../sounds/main/tones/3.wav')" class="tone-pad-btn">Tone 3</a>
-				</div>
-			</div>
-		</div>
-
-		<audio id="toneAudio" loop></audio>
-
+<div class="interface-dscrpt">
+  <h1 class="title-interface">{{title}}</h1>
+  <p class="description">Play, Create.</p>
 </div>
+
+
+<div class="music-pad-container">
+
+  <div class="interface">
+  	<div class="row music-pad-row">
+  		<div class="twelve columns hi-keys">
+  			<div class="music-pad-key" name="q" id="81-key"><div class="animation" id="81-animation"></div></div>
+  			<div class="music-pad-key" name="w" id="87-key"><div class="animation" id="87-animation"></div></div>
+  			<div class="music-pad-key" name="e" id="69-key"><div class="animation" id="69-animation"></div></div>
+  			<div class="music-pad-key" name="r" id="82-key"><div class="animation" id="82-animation"></div></div>
+  			<div class="music-pad-key" name="t" id="84-key"><div class="animation" id="84-animation"></div></div>
+  			<div class="music-pad-key" name="y" id="89-key"><div class="animation" id="89-animation"></div></div>
+  			<div class="music-pad-key" name="u" id="85-key"><div class="animation" id="85-animation"></div></div>
+  			<div class="music-pad-key" name="i" id="73-key"><div class="animation" id="73-animation"></div></div>
+  			<div class="music-pad-key" name="o" id="79-key"><div class="animation" id="79-animation"></div></div>
+  			<div class="music-pad-key" name="p" id="80-key"><div class="animation" id="80-animation"></div></div>
+  		</div>
+  	</div>
+
+  	<div class="row music-pad-row">
+  		<div class="twelve columns mid-keys">
+  			<div class="music-pad-key" name="a" id="65-key"><div class="animation" id="65-animation"></div></div>
+  			<div class="music-pad-key" name="s" id="83-key"><div class="animation" id="83-animation"></div></div>
+  			<div class="music-pad-key" name="d" id="68-key"><div class="animation" id="68-animation"></div></div>
+  			<div class="music-pad-key" name="f" id="70-key"><div class="animation" id="70-animation"></div></div>
+  			<div class="music-pad-key" name="g" id="71-key"><div class="animation" id="71-animation"></div></div>
+  			<div class="music-pad-key" name="h" id="72-key"><div class="animation" id="72-animation"></div></div>
+  			<div class="music-pad-key" name="j" id="74-key"><div class="animation" id="74-animation"></div></div>
+  			<div class="music-pad-key" name="k" id="75-key"><div class="animation" id="75-animation"></div></div>
+  			<div class="music-pad-key" name="l" id="76-key"><div class="animation" id="76-animation"></div></div>
+  		</div>
+  	</div>
+
+  	<div class="row music-pad-row">
+  		<div class="twelve columns low-keys">
+  			<div class="music-pad-key" name="z" id="90-key"><div class="animation" id="90-animation"></div></div>
+  			<div class="music-pad-key" name="x" id="88-key"><div class="animation" id="88-animation"></div></div>
+  			<div class="music-pad-key" name="c" id="67-key"><div class="animation" id="67-animation"></div></div>
+  			<div class="music-pad-key" name="v" id="86-key"><div class="animation" id="86-animation"></div></div>
+  			<div class="music-pad-key" name="b" id="66-key"><div class="animation" id="66-animation"></div></div>
+  			<div class="music-pad-key" name="n" id="78-key"><div class="animation" id="78-animation"></div></div>
+  			<div class="music-pad-key" name="m" id="77-key"><div class="animation" id="77-animation"></div></div>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+<div class="tone-container">
+  <audio id="toneAudio" loop></audio>
+  <div class="row music-pad-row">
+    <div class="twelve columns tone-pad-container" id="tone-selection">
+      <a id="tone1" href="#" onclick="StartOrStop('../sounds/main/tones/1.wav')" class="tone-pad-btn">Tone 1</a>
+      <a id="tone2" href="#" onclick="StartOrStop('../sounds/main/tones/2.wav')" class="tone-pad-btn">Tone 2</a>
+      <a id="tone3" href="#" onclick="StartOrStop('../sounds/main/tones/3.wav')" class="tone-pad-btn">Tone 3</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="gradient"></div>

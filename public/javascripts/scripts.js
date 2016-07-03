@@ -67,25 +67,61 @@ function showColor(keyId) {
 		var x = Math.random() * (max - min) + min
 		var y = Math.random() * (max - min) + min
 		var z = Math.random() * (max - min) + min
-		var colorGenerator = 'rgb(' + x + ',' + y + ',' + z + ')'
+		var colorGenerator = 'rgba(' + x + ',' + y + ',' + z + ',0.5)'
 
 		var tl = new TimelineMax({paused:true})
     tl.to(idPressed, .5, {
 				backgroundColor: colorGenerator,
-				position: "absolute",
-				width: 600,
-				height: 600,
+				width: "+=125px",
+				height: "+=125px",
 				borderRadius: "50%",
-				zIndex: -1,
 				ease:Elastic.easeOut,
 			})
 			.to(idPressed, .5, {
 				width:10,
 				height:10,
 				backgroundColor: colorGenerator,
-				zIndex: -1,
 				ease:Strong.easeInOut})
-			.to(idPressed, .5, {
-				position: "relative"})
 			.restart()
 }
+
+document.addEventListener('mousemove', function(event) {
+
+	// Setting up gradient environment
+	var x = event.clientX
+	var y = event.clientY
+	// Mouse posiition --> into numbers
+	var w = x / 5
+	var h = y / 2
+	// Mouse position alters rgb colours
+	var rgb = [ Math.round(w), Math.round(h), 150]
+
+
+	// Checking browser compatibility
+	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0
+	var isFirefox = typeof InstallTrigger !== 'undefined'
+	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
+	var isIE = false || !!document.documentMode
+	var isChrome = !!window.chrome && !!window.chrome.webstore
+	var isEdge = !isIE && !!window.StyleMedia
+	// CSS styling catered to browser
+	var isOperaGrad = " background: -o-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isFirefoxGrad = " background: -moz-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isSafariGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isIEGrad = " background: -ms-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isChromeGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isEdgeGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	// Browsers put into an array
+	var browserArr = [isOpera, isFirefox, isSafari, isIE, isChrome, isEdge];
+	var styleArr = [isOperaGrad, isFirefoxGrad, isSafariGrad, isIEGrad, isChromeGrad, isEdgeGrad];
+	// Functionality
+	for (var i = 0; i <= browserArr.length; i++) {
+
+		if (browserArr[i] === true) {
+			var counter = i;
+			document.getElementById("gradient").style = "width: 100%; height: 100%; position: fixed;" + styleArr[i];
+		}
+
+	}
+
+});
