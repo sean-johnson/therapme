@@ -105,12 +105,12 @@ document.addEventListener('mousemove', function(event) {
 	var isChrome = !!window.chrome && !!window.chrome.webstore
 	var isEdge = !isIE && !!window.StyleMedia
 	// CSS styling catered to browser
-	var isOperaGrad = " background: -o-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
-	var isFirefoxGrad = " background: -moz-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
-	var isSafariGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
-	var isIEGrad = " background: -ms-linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
-	var isChromeGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
-	var isEdgeGrad = " background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isOperaGrad = " background: -o-linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));" // Alternative rgba 240, 168, 104
+	var isFirefoxGrad = " background: -moz-linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isSafariGrad = " background: linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isIEGrad = " background: -ms-linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isChromeGrad = " background: linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
+	var isEdgeGrad = " background: linear-gradient(to right bottom, rgba(255, 226, 209, 100), rgba(" + rgb[1] + ", " + rgb[0] + ", 155, .50));"
 	// Browsers put into an array
 	var browserArr = [isOpera, isFirefox, isSafari, isIE, isChrome, isEdge];
 	var styleArr = [isOperaGrad, isFirefoxGrad, isSafariGrad, isIEGrad, isChromeGrad, isEdgeGrad];

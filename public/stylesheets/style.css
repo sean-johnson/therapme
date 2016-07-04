@@ -135,8 +135,8 @@ a {
   height: 100%;
   position: fixed;
   background: #efefef;
-  background: -webkit-linear-gradient(right top, rgba(82, 255, 184, 100), rgba(9, 12, 155, .50));
-  background: -o-linear-gradient(right top, rgba(82, 255, 184, 100), rgba(9, 12, 155, .50));
-  background: -moz-linear-gradient(right top, rgba(82, 255, 184, 100), rgba(9, 12, 155, .50));
-  background: linear-gradient(to right top, rgba(82, 255, 184, 100), rgba(9, 12, 155, .50));
+  background: -webkit-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: -o-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: -moz-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: linear-gradient(to right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
 }
