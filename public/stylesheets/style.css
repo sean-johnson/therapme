@@ -15,28 +15,56 @@ body {
 	font-size: 1.5em;
 }
 
-
 a {
-	font-family: 'Inconsolata', courier, monospace;
-	color: #00B7FF;
+	text-decoration: none;
+	color: black;
 }
-
 
 /* Main Interface Layout */
 
 .interface-dscrpt {
+	width: 100%;
+	position: absolute;
+	top: 10%;
+	z-index: 300;
 	text-align: center;
-	margin-bottom: 10%;
+}
+
+#logo {
+	margin: 0 auto;
+	padding: 0 0 15px 0;
+	width: 220px;
+	opacity: .8;
 }
 
 .music-pad-container {
-	padding: 5%;
+	width: 100%;
+	height: 100%;
+  position: absolute;
+	text-align: center;
+  z-index: 1;
+}
+
+.music-pad-container:before {      /* create a full-height inline block pseudo-element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.interface {
 	width: 90%;
-	margin: 0 auto;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .music-pad-row {
 	text-align: center;
+}
+
+.keySound {
+	height: 0;
+	visibility: hidden;
 }
 
 .music-pad-key {
@@ -44,15 +72,11 @@ a {
 	margin: 20px 3%;
 }
 
-.tone-pad-container {
-	padding-top: 10%;
-}
-
 
 /*  Main Interface Design (Type, Buttons)  */
 
 .title-interface {
-	color: #ef005b;
+	color: #efefef;
 }
 
 .description {
@@ -60,6 +84,7 @@ a {
 }
 
 .tone-pad-btn {
+	color: black;
 	display: inline-block;
 	margin: 20px 3%;
 	border: #ef005b solid 1px;
@@ -71,4 +96,47 @@ a {
 	color: #580022;
 	border-radius: 3px;
 	background-color: #ef005b;
+}
+
+.tone-pad-btn:active, .tone-pad-btn:focus {
+	outline: none;
+    color: rgba(0,0,0,0.7);
+    border: #2A7221 solid 1px;
+	border-radius: 3px;
+	background-color: #9AFD00;
+}
+
+.tone-container {
+	position: absolute;
+	width: 100%;
+	bottom: 10%;
+	z-index: 300;
+}
+
+/*  Main Interface Animations  */
+
+.animation {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+		z-index: -1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#gradient {
+	width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #efefef;
+  background: -webkit-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: -o-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: -moz-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
+  background: linear-gradient(to right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
 }
