@@ -8,8 +8,9 @@ export default () => {
   return (
     <div>
       <Interface />
-      <ThingListContainer />
-      <ThingDetailContainer />
     </div>
   )
 }
+ 
+// <ThingListContainer />
+// <ThingDetailContainer />

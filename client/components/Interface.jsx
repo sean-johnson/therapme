@@ -1,12 +1,12 @@
 import React from 'react'
+import InterfaceHeader from './InterfaceHeader'
 
 export default (props) => {
   return (
-    <div className="interface-descript">
-      <div id="logo">
-        <img src={"../images/therapme-logo.svg"} />
+    <div id="gradient">
+      <div>
+        <InterfaceHeader />
       </div>
-      <p className="description">Play, create.</p>
     </div>
   )
 }
