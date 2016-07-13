@@ -16,7 +16,7 @@ class InterfaceTones extends Component {
         this.setState({toneTrack: soundPath, play: true})
         console.log(this.state)
       } else {
-        this.setState({toneTrack: soundPath, play: false})
+        this.setState({toneTrack: '', play: false})
       }
     }
 
