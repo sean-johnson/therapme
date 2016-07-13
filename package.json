@@ -56,6 +56,8 @@
     "body-parser": "^1.15.1",
     "cors": "^2.7.1",
     "express": "^4.13.4",
+    "react-event-listener": "^0.2.1",
+    "react-keydown": "^1.6.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.2",
     "redux": "^3.5.2",
