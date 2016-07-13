@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ThingListContainer from '../containers/ThingListContainer'
-import ThingDetailContainer from '../containers/ThingDetailContainer'
+import SessionStartContainer from '../containers/SessionStartContainer'
+import SessionEndContainer from '../containers/SessionEndContainer'
 import Interface from './Interface'
 import SessionStart from './SessionStart'
 
