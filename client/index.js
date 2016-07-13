@@ -7,6 +7,7 @@ import { Router, Route, hashHistory } from 'react-router'
 import App from './components/App'
 import Interface from './components/Interface'
 import SessionEnd from './components/SessionEnd'
+import Summary from './components/Summary'
 import reducer from './reducer'
 
 let store = createStore(
@@ -22,6 +23,7 @@ render(
       <Route path="/" component={App}/>
       <Route path="/play" component={Interface}/>
       <Route path="/end" component={SessionEnd}/>
+      <Route path="/summary" component={Summary}/>
     </Router>
   </Provider>,
   document.getElementById('app')

@@ -126,6 +126,12 @@ a {
 	bottom: 3%;
 }
 
+.new-session-btn-container {
+	position: absolute;
+	width: 100%;
+	bottom: 10%;
+}
+
 .end-session-btn {
 	color: rgba(0, 0, 0, 0.3);
 	display: inline-block;
