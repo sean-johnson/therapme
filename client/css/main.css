@@ -10,9 +10,19 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	font: 14px Helvetica, Arial, sans-serif;
 	font-family: 'Karla', Helvetica, sans-serif;
 	font-size: 1.5em;
+}
+
+button {
+	margin: 0;
+	text-transform: none;
+	font-family: 'Karla', Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	color: black;
+	border: #ef005b solid 1px;
+	border-radius: 3px;
 }
 
 a {
@@ -22,12 +32,16 @@ a {
 
 /* Main Interface Layout */
 
-.interface-dscrpt {
+.interface-dscrpt, .mood-dscrpt {
 	width: 100%;
 	position: absolute;
 	top: 10%;
-	z-index: 300;
 	text-align: center;
+}
+
+.mood-dscrpt {
+	top: 17%;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 #logo {
@@ -37,15 +51,14 @@ a {
 	opacity: .8;
 }
 
-.music-pad-container {
+.music-pad-container, .emoticon-container {
 	width: 100%;
 	height: 100%;
   position: absolute;
 	text-align: center;
-  z-index: 1;
 }
 
-.music-pad-container:before {      /* create a full-height inline block pseudo-element */
+.music-pad-container:before, .emoticon-container:before {      /* create a full-height inline block pseudo-element */
     content: ' ';
     display: inline-block;
     vertical-align: middle; /* vertical alignment of the inline element */
@@ -83,7 +96,7 @@ a {
 	font-family: 'Inconsolata', monospace;
 }
 
-.tone-pad-btn {
+.tone-pad-btn,  {
 	color: black;
 	display: inline-block;
 	margin: 20px 3%;
@@ -92,16 +105,17 @@ a {
 	padding: 9px 20px;
 }
 
-.tone-pad-btn:hover {
+.tone-pad-btn:hover, .submit-btn:hover {
 	color: #580022;
 	border-radius: 3px;
+	border: #ef005b solid 1px;
 	background-color: #ef005b;
 }
 
-.tone-pad-btn:active, .tone-pad-btn:focus {
+.tone-pad-btn:active, .tone-pad-btn:focus, .submit-btn:active, .submit-btn:focus {
 	outline: none;
-    color: rgba(0,0,0,0.7);
-    border: #2A7221 solid 1px;
+  color: rgba(0,0,0,0.7);
+  border: #2A7221 solid 1px;
 	border-radius: 3px;
 	background-color: #9AFD00;
 }
@@ -110,7 +124,33 @@ a {
 	position: absolute;
 	width: 100%;
 	bottom: 10%;
-	z-index: 300;
+}
+
+.emoticon {
+	width: 100px;
+	padding: 0 3%;
+	opacity: 0.5;
+}
+
+.emoticon:hover {
+	opacity: 1.0;
+}
+
+.emoticon-container {
+	position: absolute;
+	width: 100%;
+}
+
+.submit-btn-container {
+	position: absolute;
+	width: 100%;
+	bottom: 20%;
+}
+
+.submit-btn {
+	letter-spacing: normal;
+	display: table;
+  margin: 0 auto;
 }
 
 /*  Main Interface Animations  */
@@ -131,10 +171,10 @@ a {
 }
 
 #gradient {
+	z-index: -100;
 	width: 100%;
   height: 100%;
   position: fixed;
-	z-index: -200;
   background: #efefef;
   background: -webkit-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
   background: -o-linear-gradient(right top, rgba(255, 226, 209, 100), rgba(255, 66, 66, .50));
