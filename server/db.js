@@ -1,18 +1,21 @@
 module.exports = {
-  getThings: getThings
+  emoticons: emoticons
 }
 
-var things = [{
+var emoticons = [{
   id: 1,
-  name: 'Red thing'
+  name: 'Happy'
 }, {
   id: 2,
-  name: 'Blue thing'
+  name: 'Sad'
 }, {
   id: 3,
-  name: 'Yellow thing'
+  name: 'Bored'
+}, {
+  id: 4,
+  name: 'Angry'
 }]
 
-function getThings () {
-  return things
+function getEmoticons () {
+  return emoticons
 }

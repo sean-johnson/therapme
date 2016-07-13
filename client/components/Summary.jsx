@@ -19,7 +19,7 @@ export default (props) => {
       <div className="new-session-btn-container">
         <div className="row music-pad-row">
           <div className="twelve columns">
-            <Link to="/" className="tone-pad-btn">Try a new session.</Link>
+            <Link to="/" className="tone-pad-btn">Try a new session</Link>
           </div>
         </div>
       </div>

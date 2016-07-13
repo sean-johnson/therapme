@@ -1,46 +1,28 @@
-import { SHOW_DETAILS, HIDE_DETAILS, ADD_THING } from './actions'
+import { ADD_EMOTICON } from './actions'
 
 const INITIAL_STATE = {
-  selectedThing: null,
-  things: [{
+  selectedEmoticon: null,
+  moods: [{
     id: 1,
-    name: 'Red thing'
+    name: 'Happy'
+  },{
+    id: 1,
+    name: 'Sad'
+  },{
+    id: 1,
+    name: 'Bored'
+  },{
+    id: 1,
+    name: 'Angry'
   }]
 }
 
 export default (state = INITIAL_STATE , action) => {
   switch (action.type) {
-    case SHOW_DETAILS:
+    case ADD_EMOTICON:
       return Object.assign({}, state, {
         selectedThing: action.id
       })
-    case HIDE_DETAILS:
-      return Object.assign({}, state, {
-        selectedThing: null
-      })
-    case ADD_THING:
-    // This is an alternative that uses the ES6 spread operator
-    // return Object.assign({}, state, {
-    //   things: [
-    //     ...state.things,
-    //     {
-    //       id: state.things.length + 1,
-    //       name: action.name
-    //     }
-    //   ]
-    // })
-
-      // create copy of existing state
-      const newState = Object.assign({}, state)
-      newState.things = state.things.slice()
-
-      // add new thing
-      newState.things.push({
-        id: state.things.length + 1,
-        name: action.name
-      })
-
-      return newState
     default:
       return state
   }

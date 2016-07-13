@@ -34,7 +34,7 @@ class InterfaceTones extends Component {
         </div>
         <div className="row music-pad-row">
           <div className="twelve columns">
-            <Link to="/end" className="end-session-btn">I'm finished playing.</Link>
+            <Link to="/end" className="end-session-btn">I'm finished playing</Link>
           </div>
         </div>
       </div>

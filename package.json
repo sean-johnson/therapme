@@ -1,5 +1,5 @@
 {
-  "name": "therapMe-react-redux",
+  "name": "TherapMe-react-redux",
   "version": "1.0.0",
   "description": "A music/colour therapy app",
   "main": "server/server.js",

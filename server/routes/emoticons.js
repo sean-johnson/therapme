@@ -4,7 +4,7 @@ var router = express.Router()
 var db = require('../db')
 
 router.get('/', function (req, res) {
-  res.json(db.getThings())
+  res.json(db.getEmoticons())
 })
 
 module.exports = router
