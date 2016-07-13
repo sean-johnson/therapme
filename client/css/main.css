@@ -96,7 +96,7 @@ a {
 	font-family: 'Inconsolata', monospace;
 }
 
-.tone-pad-btn,  {
+.tone-pad-btn  {
 	color: black;
 	display: inline-block;
 	margin: 20px 3%;
@@ -123,7 +123,18 @@ a {
 .tone-container {
 	position: absolute;
 	width: 100%;
-	bottom: 10%;
+	bottom: 3%;
+}
+
+.end-session-btn {
+	color: rgba(0, 0, 0, 0.3);
+	display: inline-block;
+	margin: 20px 3%;
+	padding: 9px 10px;
+}
+
+.end-session-btn:hover {
+	color: rgba(0, 0, 0, 0.9);
 }
 
 .emoticon {
