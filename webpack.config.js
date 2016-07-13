@@ -9,7 +9,9 @@ var PATHS = {
   build: path.join(__dirname, 'server', 'static'),
   client: path.join(__dirname, 'client'),
   html: path.join(__dirname, 'client', 'html'),
-  css: path.join(__dirname, 'client', 'css')
+  css: path.join(__dirname, 'client', 'css'),
+  sounds: path.join(__dirname, 'client', 'sounds'),
+  images: path.join(__dirname, 'client', 'images')
 }
 
 module.exports = {
@@ -30,7 +32,9 @@ module.exports = {
     // Simply copies the files over
     new CopyWebpackPlugin([
       { from: PATHS.html }, // to: output.path
-      { from: PATHS.css } // to: output.path
+      { from: PATHS.css },
+      { from: PATHS.sounds},
+      { from: PATHS.images } // to: output.path
     ]),
     // Avoid publishing files when compilation fails
     new webpack.NoErrorsPlugin()

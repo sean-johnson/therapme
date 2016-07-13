@@ -4,7 +4,7 @@ export default () => {
   return (
     <div className="interface-dscrpt">
         <div id="logo">
-          Logo Goes here
+          <img src={"./therapme-logo.svg"} alt="" />
         </div>
         <p className="description">Play, create.</p>
     </div>
